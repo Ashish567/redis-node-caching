@@ -1,3 +1,6 @@
+First thing first run the redis server on your local machine.😅
+
+
 First we created a redis client and link it with the local redis instance using the default redis port (6379)
 const client = redis.createClient(6379);
 Then, in the /recipe route handler, we tried to get the appropriate matching data to serve the request by checking for the key in our redis store. If found, the result is served to the requesting client from our cache and then we don’t have to make the server request anymore.
